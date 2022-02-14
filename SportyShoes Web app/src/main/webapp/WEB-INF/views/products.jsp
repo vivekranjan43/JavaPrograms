@@ -12,8 +12,8 @@
 <h2>Welcome to Sporty Shoes</h2>
 
 
-<div><a  href="addproduct"> Add new product </a><br/></div><br/>
-<div><a  href="orders"> Order Summary </a><br/></div><br/>
+<div><h3><a  href="addproduct"> Add new product </a></h3><br/></div>
+<div><h3><a  href="orders"> Purchase Report </a></h3><br/></div><br/>
 <div>
 <form action="" method="get" >
 	Product Name: <input type="text" value="${product.getName()}" name="name"/><br/>

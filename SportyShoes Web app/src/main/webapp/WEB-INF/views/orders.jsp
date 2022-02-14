@@ -10,7 +10,7 @@
 </head>
 <body>
 <h2>Welcome to Sporty Shoes</h2>
-Orders Lists
+<h3>Purchase Report</h3>
 <br/><br/>
 
 <c:set var="sl" value="1"/>
@@ -19,11 +19,10 @@ Orders Lists
 			<tr class="bg-success">
 				<th>SL No.</th>
 		        <th>Order Id</th>
-				<th>Product Name</th>
-				<th>Brand</th>
-				<th>User Name</th>
-				<th>Order Date</th>
-				<th>Ordered Quantity</th>
+				<th>Product ID</th>
+				<th>Ordered Quantity</th>				
+				<th>Order Date</th>				
+				<th>Status</th>
 				<th></th>
 			</tr>
 	</thead>
@@ -31,11 +30,10 @@ Orders Lists
 		  <tr> 
 		  	<td>${sl}</td> 
 		    <td>${Order.getOrderid()}</td> 
-		    <td>${Order.getProduct().getName()}</td>
-		    <td>${Order.getProduct().getBrand()}</td>
-		    <td>${Order.getUser().getUserfirstname()}</td>
-		    <td>${Order.getOrderDate()}</td>
+		    <td>${Order.getProductid()}</td>
 		    <td>${Order.getQuantity()}</td>
+		    <td>${Order.getOrderDate()}</td>		
+		    <td>${Order.getStatus()}</td>
 		    <td> </td>
 		    <c:set  var="sl" value="${sl+1}"/>
 		  </tr> 

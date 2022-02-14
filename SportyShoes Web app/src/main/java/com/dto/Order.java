@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
+import com.dao.UserDao;
+
 @Component
 public class Order {
 	private String orderid;
@@ -15,6 +17,30 @@ public class Order {
 	private String status;
 	
 	
+	
+	public Order(String orderid, int productid, Product product, int quantity, Date orderDate, User user,
+			String status) {
+		
+		this.orderid = orderid;
+		this.productid = productid;
+		this.product = product;
+		this.quantity = quantity;
+		this.orderDate = orderDate;
+		this.user = user;
+		this.status = status;
+	}
+	public Order(String orderid, int productid, int quantity, Date orderDate,String status) {
+		
+		this.orderid = orderid;
+		this.productid = productid;		
+		this.quantity = quantity;
+		this.orderDate = orderDate;		
+		this.status = status;
+	}
+	
+	public Order() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getOrderid() {
 		return orderid;
 	}

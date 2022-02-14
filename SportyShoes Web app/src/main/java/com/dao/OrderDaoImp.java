@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.dto.Order;
+import com.dto.Product;
 import com.dto.User;
 
 @Repository("OrderDaoImp")
@@ -46,17 +47,20 @@ public class OrderDaoImp implements OrderDao {
 
 			@Override
 			public Order mapRow(ResultSet rs, int rowNum) throws SQLException {	
-				System.out.println("Inside list order 1");
-				System.out.println("check success0");
-				//System.out.println(productDaoImp.getProductsById(rs.getInt(1)));
-				System.out.println("check success1");
-				//System.out.println(userDaoImp.getUserById(rs.getString(7)));
-				
-				Order order = new Order();
-				
-				//Order order = new Order(rs.getString(1));
-				System.out.println("check success2");
-				System.out.println(order);
+				/*
+				 * System.out.println("Inside list order 1");
+				 * System.out.println("check success0");
+				 * //System.out.println(productDaoImp.getProductsById(rs.getInt(1)));
+				 * System.out.println("check success1");
+				 * //System.out.println(userDaoImp.getUserById(rs.getString(7)));
+				 * 
+				 * Order order = new Order();
+				 * 
+				 * //Order order = new Order(rs.getString(1));
+				 * System.out.println("check success2"); System.out.println(order);
+				 */
+				Order order = new Order(rs.getString(1), rs.getInt(2), rs.getInt(3),rs.getDate(4),rs.getString(6));
+			
 				return order;
 			}
 			
