@@ -1,0 +1,6 @@
+com\sample\crud\controller\UserController.class
+com\sample\crud\model\User.class
+com\sample\crud\service\UserService.class
+com\sample\crud\repo\UserRepository.class
+com\sample\crud\CrudApplication.class
+com\sample\crud\service\UserServiceImpl.class
